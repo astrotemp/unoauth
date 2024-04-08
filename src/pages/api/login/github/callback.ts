@@ -26,7 +26,6 @@ export const GET: APIRoute = async ({ url, cookies, redirect }) => {
 			},
 		}).then((r) => r.json());
 
-		// const existingUser = await db.table('user').where('github_id', '=', githubUser.id).get()
 		const [existingUser] = await db
 			.select()
 			.from(User)

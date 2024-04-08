@@ -13,6 +13,10 @@ const User = defineTable({
 			unique: true,
 			optional: true,
 		}),
+		google_id: column.number({
+			unique: true,
+			optional: true,
+		}),
 		authType: column.text({
 			optional: true
 		}) // github or google or hash_password 

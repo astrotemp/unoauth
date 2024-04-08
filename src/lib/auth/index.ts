@@ -11,6 +11,7 @@ const lucia = new Lucia(new AstroDBAdapter(db, Session, User), {
 	getUserAttributes: (userAttributes) => ({
 		github_id: userAttributes?.github_id,
 		username: userAttributes.username,
+		google_id: userAttributes?.google_id,
 	}),
 });
 
@@ -23,8 +24,9 @@ declare module "lucia" {
 export interface DatabaseUserAttributes {
 	github_id?: number;
 	username: string;
+	google_id?: number;
 }
 
-
-export {github} from './github'
-export default lucia
+export { github } from "./github";
+export { google } from "./google";
+export default lucia;

@@ -3,7 +3,8 @@ import { session$ } from "@/store";
 import type { APIRoute } from "astro";
 
 export const ALL: APIRoute = async ({ redirect, cookies }) => {
-	if (!session$.value?.id) {
+	console.log({session: session$.get()})
+	if (!session$.get()?.id) {
 		return new Response(null, {
 			status: 401,
 		});
