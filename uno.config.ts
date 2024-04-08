@@ -4,11 +4,13 @@ import {
 	presetIcons,
 	presetWebFonts,
 	presetTypography,
+	presetUno
 } from "unocss";
 
 export default defineConfig({
 	// ...UnoCSS options
 	presets: [
+		presetUno(),
 		presetIcons(),
 		presetTypography(),
 		presetWebFonts({

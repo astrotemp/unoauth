@@ -1,14 +1,21 @@
-import { defineDb, column, defineTable } from "astro:db";
+import { defineDb, column, defineTable,  } from "astro:db";
 
 const User = defineTable({
 	columns: {
 		id: column.text({
 			primaryKey: true,
 		}),
-    username: column.text(),
-    github_id: column.number({
-      unique: true
-    })
+		username: column.text(),
+		hashed_password: column.text({
+			optional: true
+		}),
+		github_id: column.number({
+			unique: true,
+			optional: true,
+		}),
+		authType: column.text({
+			optional: true
+		}) // github or google or hash_password 
 	},
 });
 
@@ -26,5 +33,5 @@ const Session = defineTable({
 
 // https://astro.build/db/config
 export default defineDb({
-	tables: {User, Session},
+	tables: { User, Session },
 });

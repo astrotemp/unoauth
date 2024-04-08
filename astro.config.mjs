@@ -8,28 +8,41 @@ import preact from '@astrojs/preact';
 import million from 'million/compiler';
 import sentry from '@sentry/astro';
 import spotlightjs from '@spotlightjs/astro';
-import metaTags from "astro-meta-tags";
+import metaTags from 'astro-meta-tags';
 
-import pageInsight from "astro-page-insight";
+import pageInsight from 'astro-page-insight';
 
 // https://astro.build/config
 export default defineConfig({
   plugins: [],
   output: 'server',
   adapter: vercel(),
-  integrations: [sitemap(), db(), mdx(), UnoCSS({
-    injectReset: false
-  }), preact({
-    compat: true
-  }), sentry(), spotlightjs(), metaTags(), pageInsight()],
+  integrations: [
+    sitemap(),
+    db(),
+    mdx(),
+
+    preact({
+      compat: true,
+    }),
+    sentry(),
+    spotlightjs(),
+    metaTags(),
+    pageInsight(),
+    UnoCSS({
+      injectReset: true,
+    }),
+  ],
   vite: {
-    plugins: [million.vite({
-      mode: 'preact',
-      server: true,
-      auto: true
-    })],
+    plugins: [
+      million.vite({
+        mode: 'preact',
+        server: true,
+        auto: true,
+      }),
+    ],
     optimizeDeps: {
-			exclude: ["oslo", "astro:db"]
-		}
-  }
+      exclude: ['oslo', 'astro:db'],
+    },
+  },
 });
