@@ -29,7 +29,7 @@
     "nanostores": "^0.10.3",
     "oslo": "^1.2.0",
     "preact": "^10.20.1",
-    "typescript": "^5.4.4",
+    "typescript": "^5.4.4"
   },
   "devDependencies": {
     "@iconify-json/heroicons-outline": "^1.1.10",
