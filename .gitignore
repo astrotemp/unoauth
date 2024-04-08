@@ -24,5 +24,6 @@ pnpm-debug.log*
 .idea/
 
 # astro
-# .astro
+.astro
 .pageinsight
+pnpm-lock.yaml
