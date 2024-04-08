@@ -22,8 +22,11 @@
     "astro": "^4.5.16",
     "astro-seo-meta": "^4.1.0",
     "astro-useragent": "^4.0.1",
+    "lucia": "^3.1.1",
+    "lucia-adapter-astrodb": "^0.0.8",
     "million": "2",
     "nanostores": "^0.10.3",
+    "oslo": "^1.2.0",
     "preact": "^10.20.1"
   },
   "devDependencies": {

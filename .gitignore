@@ -28,3 +28,4 @@ pnpm-debug.log*
 .pageinsight
 pnpm-lock.yaml
 .vscode
+.trunk

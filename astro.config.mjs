@@ -27,6 +27,9 @@ export default defineConfig({
       mode: 'preact',
       server: true,
       auto: true
-    })]
+    })],
+    optimizeDeps: {
+			exclude: ["oslo", "astro:db"]
+		}
   }
 });
