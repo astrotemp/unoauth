@@ -9,7 +9,19 @@
 - Lucia Auth (+ Oauth)
 - Astro DB
 - Vercel
-- StyleLint Astro Config
+- Sentry (with spotlight.js)
+- StyleLint + ESLint
+
+## Astro Integrations
+
+- [OpenGraph Canvas](https://github.com/delucis/astro-og-canvas/tree/latest/packages/astro-og-canvas)
+- [Astro UserAgents](https://github.com/codiume/orbit/tree/main/packages/astro-useragent)
+- [Astro SEO Meta](https://github.com/codiume/orbit/tree/main/packages/astro-seo-meta)
+
+### Dev Toolbar
+
+- [Astro Meta Tags](https://github.com/patrick91/astro-meta-tags#readme)
+- [Astro Page Insights](https://github.com/ktym4a/astro-page-insight)
 
 ## Useful Links
 

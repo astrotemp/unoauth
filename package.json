@@ -1,51 +1,52 @@
 {
-	"name": "unoauth",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro check && astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/check": "^0.5.10",
-		"@astrojs/db": "^0.10.1",
-		"@astrojs/mdx": "^2.2.4",
-		"@astrojs/preact": "^3.1.2",
-		"@astrojs/sitemap": "^3.1.2",
-		"@astrojs/vercel": "^7.5.2",
-		"@nanostores/persistent": "^0.10.1",
-		"@nanostores/preact": "^0.5.1",
-		"@preact/signals": "^1.2.3",
-
-		"astro": "^4.5.16",
-
-		"million": "2",
-		"nanostores": "^0.10.3",
-		"preact": "^10.20.1"
-	},
-	"devDependencies": {
-		"@iconify-json/heroicons-outline": "^1.1.10",
-		"@iconify-json/heroicons-solid": "^1.1.11",
-		"@iconify-json/mdi": "^1.1.66",
-		"@julr/unocss-preset-forms": "^0.1.0",
-		"astro-meta-tags": "^0.2.2",
-		"@sentry/astro": "^7.109.0",
-		"@spotlightjs/astro": "^1.0.20",
-		"astro-page-insight": "^0.6.1",
-		"@typescript-eslint/parser": "^7.5.0",
-		"@unocss/reset": "^0.59.0",
-		"eslint-plugin-astro": "^0.34.0",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"stylelint-config-html": "^1.1.0",
-		"unocss": "^0.59.0",
-		"unocss-preset-ease": "^0.0.3",
-		"typescript": "^5.4.4"
-	},
-	"overrides": {
-		"react": "npm:@preact/compat@latest",
-		"react-dom": "npm:@preact/compat@latest"
-	}
+  "name": "unoauth",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/db": "^0.10.1",
+    "@astrojs/mdx": "^2.2.4",
+    "@astrojs/preact": "^3.1.2",
+    "@astrojs/sitemap": "^3.1.2",
+    "@astrojs/vercel": "^7.5.2",
+    "@nanostores/persistent": "^0.10.1",
+    "@nanostores/preact": "^0.5.1",
+    "@preact/signals": "^1.2.3",
+    "astro": "^4.5.16",
+    "astro-seo-meta": "^4.1.0",
+    "astro-useragent": "^4.0.1",
+    "million": "2",
+    "nanostores": "^0.10.3",
+    "preact": "^10.20.1"
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons-outline": "^1.1.10",
+    "@iconify-json/heroicons-solid": "^1.1.11",
+    "@iconify-json/mdi": "^1.1.66",
+    "@julr/unocss-preset-forms": "^0.1.0",
+    "@sentry/astro": "^7.109.0",
+    "@spotlightjs/astro": "^1.0.20",
+    "@typescript-eslint/parser": "^7.5.0",
+    "@unocss/reset": "^0.59.0",
+    "astro-meta-tags": "^0.2.2",
+    "astro-og-canvas": "^0.4.2",
+    "astro-page-insight": "^0.6.1",
+    "eslint-plugin-astro": "^0.34.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "stylelint-config-html": "^1.1.0",
+    "typescript": "^5.4.4",
+    "unocss": "^0.59.0",
+    "unocss-preset-ease": "^0.0.3"
+  },
+  "overrides": {
+    "react": "npm:@preact/compat@latest",
+    "react-dom": "npm:@preact/compat@latest"
+  }
 }
