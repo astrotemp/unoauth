@@ -5,6 +5,10 @@ const User = defineTable({
 		id: column.text({
 			primaryKey: true,
 		}),
+    username: column.text(),
+    github_id: column.number({
+      unique: true
+    })
 	},
 });
 

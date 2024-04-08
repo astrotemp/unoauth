@@ -6,7 +6,7 @@
 - Preact (compat + signals)
 - Million Compiler v2
 - Nanostores
-- Lucia Auth (+ Oauth)
+- Lucia Auth (+ Oauth) [lucia, oslo, arctic]
 - Astro DB
 - Vercel
 - Sentry (with spotlight.js)

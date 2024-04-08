@@ -19,6 +19,7 @@
     "@nanostores/persistent": "^0.10.1",
     "@nanostores/preact": "^0.5.1",
     "@preact/signals": "^1.2.3",
+    "arctic": "^1.5.0",
     "astro": "^4.5.16",
     "astro-seo-meta": "^4.1.0",
     "astro-useragent": "^4.0.1",
