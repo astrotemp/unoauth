@@ -8,7 +8,7 @@ interface GitHubUser {
 	login: string;
 }
 
-export const get: APIRoute = async ({ url, cookies, redirect }) => {
+export const GET: APIRoute = async ({ url, cookies, redirect }) => {
 	const code = url.searchParams.get("code");
 	const state = url.searchParams.get("state");
 	const storedState = cookies.get("github_oauth_state")?.value;

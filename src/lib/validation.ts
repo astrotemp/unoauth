@@ -8,7 +8,7 @@ export const usernameSchema = z
 	.max(31, {
 		message: "Username must be between 3 and 31 characters.",
 	})
-	.regex(/^[a-z0-9_-]+$/, {
+	.regex(/^[A-z0-9_-]+$/, {
 		message:
 			"Only lowercase letters, numbers, underscores, and hyphens are allowed.",
 	});

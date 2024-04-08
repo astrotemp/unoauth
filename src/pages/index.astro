@@ -1,5 +1,6 @@
 ---
 const {user} = Astro.locals
+console.log(Astro.locals)
 ---
 
 <html lang="en">
@@ -11,7 +12,7 @@ const {user} = Astro.locals
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Hello {Astro.locals.username}</h1>
+		<h1>Hello {JSON.stringify(Astro.locals.user)}</h1>
 		<code lang="js">{user}</code>
 	</body>
 </html>

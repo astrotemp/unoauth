@@ -4,7 +4,8 @@ import { db, User } from "astro:db";
 import lucia from "@/lib/auth";
 import { passwordSchema, usernameSchema } from "@/lib/validation";
 
-export const post: APIRoute = async ({ request, cookies, redirect }) => {
+
+export const POST: APIRoute = async ({ request, cookies, redirect }) => {
 	const formData = await request.formData();
 	const username = formData.get("username") as string;
 	if (!username || !usernameSchema.safeParse(username).success)
@@ -30,5 +31,5 @@ export const post: APIRoute = async ({ request, cookies, redirect }) => {
 		sessionCookie.attributes,
 	);
 
-	return redirect('/')
+	return redirect("/");
 };

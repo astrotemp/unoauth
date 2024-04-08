@@ -2,11 +2,10 @@ import lucia from "@/lib/auth";
 import { Scrypt, generateId } from "lucia";
 import type { APIRoute } from "astro";
 import { usernameSchema, passwordSchema } from "@/lib/validation";
-import { db, User,eq } from "astro:db";
+import { db, User, eq } from "astro:db";
 
-export const get: APIRoute = async({request}) => new Response(request.url)
 
-export const post: APIRoute = async ({ request, cookies, redirect }) => {
+export const POST: APIRoute = async ({ request, cookies, redirect }) => {
 	const formData = await request.formData();
 	const username = formData.get("username") as string;
 	if (!username || !usernameSchema.safeParse(username).success)
@@ -25,11 +24,14 @@ export const post: APIRoute = async ({ request, cookies, redirect }) => {
 		return new Response("Incorrect username or password", { status: 400 });
 	}
 
-  const validPassword = await new Scrypt().verify(existingUser.hashed_password, password)
-  if (!validPassword)
-    return new Response('Incorrect password or username', {status: 400})
+	const validPassword = await new Scrypt().verify(
+		existingUser.hashed_password,
+		password,
+	);
+	if (!validPassword)
+		return new Response("Incorrect password or username", { status: 400 });
 
-  const session = await lucia.createSession(existingUser.id, {})
+	const session = await lucia.createSession(existingUser.id, {});
 	const sessionCookie = lucia.createSessionCookie(session.id);
 	cookies.set(
 		sessionCookie.name,
