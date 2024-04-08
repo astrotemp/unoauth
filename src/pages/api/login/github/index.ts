@@ -14,6 +14,6 @@ export const GET: APIRoute = async ({ cookies, redirect }) => {
 		maxAge: 60 * 10,
 		sameSite: "lax",
 	});
-
+	
 	return redirect(url.toString());
 };

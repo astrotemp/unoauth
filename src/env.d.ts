@@ -1,6 +1,22 @@
 /// <reference path="../.astro/db-types.d.ts" />
 /// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
+import type { Session } from "lucia";
+
+declare namespace App {
+	interface Locals {
+		user?: {
+			username: string;
+			github_id: number|null;
+			authType: string|null;
+			id: string | number
+			hashed_password: string|null
+		};
+		id?: string | number;
+		github_id?: number;
+		session?: Session;
+	}
+}
 
 interface ImportMetaEnv {
 	readonly GITHUB_CLIENT_ID: string;
@@ -9,12 +25,4 @@ interface ImportMetaEnv {
 
 interface ImportMeta {
 	readonly env: ImportMetaEnv;
-}
-
-declare namespace App {
-	interface Locals {
-		user?: import('@/lib/auth').DatabaseUserAttributes
-		session?: import('lucia').Session
-		username?: string
-	}
 }

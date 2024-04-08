@@ -1,6 +1,5 @@
 ---
-const {user} = Astro.locals
-console.log(Astro.locals)
+import { user$ } from "@/store";
 ---
 
 <html lang="en">
@@ -12,7 +11,7 @@ console.log(Astro.locals)
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Hello {JSON.stringify(Astro.locals.user)}</h1>
-		<code lang="js">{user}</code>
+		<h1>Hello {user$.get().username}</h1>
+		<code lang="json">{JSON.stringify(user$.get())}</code>
 	</body>
 </html>
