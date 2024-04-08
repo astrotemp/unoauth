@@ -2,7 +2,7 @@ import lucia from "@/lib/auth";
 import { session$ } from "@/store";
 import type { APIRoute } from "astro";
 
-export const POST: APIRoute = async ({ redirect, cookies }) => {
+export const ALL: APIRoute = async ({ redirect, cookies }) => {
 	if (!session$.value?.id) {
 		return new Response(null, {
 			status: 401,

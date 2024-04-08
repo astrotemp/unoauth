@@ -6,12 +6,17 @@ import { user$ } from "@/store";
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://unpkg.com/@picocss/pico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Hello {user$.get().username}</h1>
-		<code lang="json">{JSON.stringify(user$.get())}</code>
+		<main class="container">
+			<h1>Hello {user$.get().username}</h1>
+			<code lang="json">{JSON.stringify(user$.get())}</code>
+			<p><a role="button" href="/api/logout">Logout</a></p>
+		</main>
+		
 	</body>
 </html>
