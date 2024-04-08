@@ -28,8 +28,7 @@
     "million": "2",
     "nanostores": "^0.10.3",
     "oslo": "^1.2.0",
-    "preact": "^10.20.1",
-    "typescript": "^5.4.4"
+    "preact": "^10.20.1"
   },
   "devDependencies": {
     "@iconify-json/heroicons-outline": "^1.1.10",
@@ -43,7 +42,8 @@
     "astro-og-canvas": "^0.4.2",
     "astro-page-insight": "^0.6.1",
     "unocss": "^0.59.0",
-    "unocss-preset-ease": "^0.0.3"
+    "unocss-preset-ease": "^0.0.3",
+    "typescript": "^5.4.4"
   },
   "overrides": {
     "react": "npm:@preact/compat@latest",
